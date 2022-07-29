@@ -25,3 +25,8 @@ where x.Calories < (select AVG(Calories)
 		    from drinkMenu
 		    where Beverage_category=x.Beverage_category)
 ```
+
+
+## Screenshots
+
+![App Screenshot](https://i.ibb.co/XYYRtyZ/Screenshot-12.png)
