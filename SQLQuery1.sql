@@ -4,7 +4,7 @@
 select Beverage , Beverage_prep
 from drinkMenu
 where Calories in (select Max(Calories)
-from drinkMenu)
+		   from drinkMenu)
 
 
 ------------------------------------------------------------------------------------------------------------
@@ -21,5 +21,5 @@ group by Beverage_category
 select x.Beverage_category , x.Beverage, x.Calories
 from drinkMenu x
 where x.Calories < (select AVG(Calories)
-					from drinkMenu
-					where Beverage_category=x.Beverage_category)
+		    from drinkMenu
+		    where Beverage_category=x.Beverage_category)
